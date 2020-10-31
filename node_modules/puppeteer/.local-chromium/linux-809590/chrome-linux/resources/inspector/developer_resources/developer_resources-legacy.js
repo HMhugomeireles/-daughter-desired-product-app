@@ -1,0 +1,1 @@
+import*as DeveloperResourcesModule from'./developer_resources.js';self.DeveloperResources=self.DeveloperResources||{};DeveloperResources=DeveloperResources||{};DeveloperResources.DeveloperResourcesView=DeveloperResourcesModule.DeveloperResourcesView.DeveloperResourcesView;
