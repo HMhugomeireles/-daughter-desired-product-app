@@ -15,3 +15,16 @@ services:
       - mongodb
     ports:
       - 3333:3000
+  web:
+    build: .
+    command: npm start
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    ports:
+      - "4444:4000"
+    depends_on:
+      - mongodb
+    environment:
+      PORT: 4000
+      MONGODB_URL: mongodb://localhost:32032/
