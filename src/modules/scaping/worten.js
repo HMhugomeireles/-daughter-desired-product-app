@@ -17,10 +17,9 @@ async function getProductFromWorten(product) {
       return Array.from(document.querySelector('#products-list-block').children)
         .map(element => ({
           img: element.querySelector('.lazy.loaded').src,
-          title: element.querySelector('.w-product__title').innerText,
+          name: element.querySelector('.w-product__title').innerText,
           priceTOShow: element.querySelector('.iss-current-price').innerText,
-          link: element.querySelector('a').href,
-          createAt: Date.now()
+          link: element.querySelector('a').href
         })
         )
     })
@@ -34,5 +33,5 @@ async function getProductFromWorten(product) {
 }
 
 module.exports = {
-  getProductFromWorten
+  scapingWorten: getProductFromWorten
 }
