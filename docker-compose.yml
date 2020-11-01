@@ -22,9 +22,9 @@ services:
       - .:/usr/app/
       - /usr/app/node_modules
     ports:
-      - "4444:4000"
+      - "4545:4400"
     depends_on:
       - mongodb
     environment:
-      PORT: 4000
+      PORT: 4400
       MONGODB_URL: mongodb://localhost:32032/
