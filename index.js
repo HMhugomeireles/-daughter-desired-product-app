@@ -1,4 +1,4 @@
-const { getProductFromWorten } = require('./modules/scraping/worten')
+const { getProductFromWorten } = require('./modules/scaping/worten')
 
 async function main() {
   try {
