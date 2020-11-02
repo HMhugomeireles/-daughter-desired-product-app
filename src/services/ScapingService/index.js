@@ -1,5 +1,5 @@
-const ProductModel = require('../../database/schemas')
-const getWebScapingFind = require('../../modules/scaping')
+//const ProductModel = require('../../database/schemas')
+const getWebScapingFind = require('../../modules/scraping')
 
 
 async function searchProduct(product) {
@@ -9,7 +9,7 @@ async function searchProduct(product) {
 
     return 'ok'
   } catch (error) {
-    console.log("ERROR::", error)
+    throw new Error("[ScrapingService::searching]::", error)
   }
 }
 

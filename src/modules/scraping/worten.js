@@ -5,7 +5,7 @@ function wortenSearchURL(product) {
   return `https://www.worten.pt/search?query=${product}&sortBy=relevance&hitsPerPage=48&page=1`;
 }
 
-async function getProductFromWorten(product) {
+async function scrapingWorten(product) {
   try {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
@@ -24,6 +24,7 @@ async function getProductFromWorten(product) {
         )
     })
 
+    console.log("data", data)
     await browser.close();
     return data;
 
@@ -31,7 +32,9 @@ async function getProductFromWorten(product) {
     throw new Error("[Worten scrapping] ->", error)
   }
 }
-
+/* 
 module.exports = {
-  scapingWorten: getProductFromWorten
-}
+  scrapingWorten
+} */
+
+scrapingWorten("macbook pro")

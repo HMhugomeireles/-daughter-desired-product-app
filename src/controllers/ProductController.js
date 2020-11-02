@@ -1,16 +1,15 @@
 const { Router } = require('express')
 const { ProductService } = require('../services')
 
-const routerProdut = Router()
+const routerProduct = Router()
 
-routerProdut.get('/search/:product',
+routerProduct.get('/search/:product',
   async (req, res) => {
+    const { product } = req.params;
 
-    //const { product } = request;
+    const result = await ProductService.searchProduct(product)
 
-    //const result = await ProductService.searchProduct(product)
-
-    /* if (result) {
+    if (result) {
       res.json({
         status: 'ok',
         products: result
@@ -21,10 +20,9 @@ routerProdut.get('/search/:product',
     res.json({
       status: 'error',
       message: 'Error on search'
-    }) */
-    res.json({ msg: 'ok' })
+    })
   }
 )
 
 
-module.exports = routerProdut
+module.exports = routerProduct

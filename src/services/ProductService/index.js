@@ -1,10 +1,16 @@
+const ScrapingService = require('../ScapingService')
 
+async function searchProduct(product) {
+  try {
+    const result = await ScrapingService.searchProduct(product);
 
-function getLastSearchs() {
-
+    return result
+  } catch (error) {
+    console.error("[ProductService::searchProduct]::", error)
+  }
 }
 
 
 module.exports = {
-  getLastSearchs
+  searchProduct
 }
