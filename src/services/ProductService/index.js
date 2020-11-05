@@ -2,11 +2,10 @@ const ScrapingService = require('../ScapingService')
 
 async function searchProduct(product) {
   try {
-    const result = await ScrapingService.searchProduct(product);
-
-    return result
+    return await ScrapingService.searchProduct(product);
+  
   } catch (error) {
-    console.error("[ProductService::searchProduct]::", error)
+    throw new Error("[ProductService::searchProduct]::", error)
   }
 }
 

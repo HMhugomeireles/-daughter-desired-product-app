@@ -5,22 +5,30 @@ const routerProduct = Router()
 
 routerProduct.get('/search/:product',
   async (req, res) => {
-    const { product } = req.params;
+    try {
+      const { product } = req.params;
 
-    const result = await ProductService.searchProduct(product)
-
-    if (result) {
+      const result = await ProductService.searchProduct(product)
+      
+      if (!result) {
+        throw new Error('Same error append');
+      }
+      
       res.json({
-        status: 'ok',
+        success: true,
         products: result
       })
-      return
+    } catch (error) {
+      res.json({
+        success: false,
+        message: error.message,
+        stack: error
+      })  
     }
 
-    res.json({
-      status: 'error',
-      message: 'Error on search'
-    })
+
+
+    
   }
 )
 

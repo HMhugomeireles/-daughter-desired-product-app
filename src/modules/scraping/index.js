@@ -10,4 +10,4 @@ async function getWebScapingFind(product) {
   }
 }
 
-module.exports = getWebScapingFind
+module.exports = getWebScapingFind 

@@ -18,23 +18,20 @@ async function scrapingWorten(product) {
         .map(element => ({
           img: element.querySelector('.lazy.loaded').src,
           name: element.querySelector('.w-product__title').innerText,
-          priceTOShow: element.querySelector('.iss-current-price').innerText,
+          priceToShow: element.querySelector('.iss-current-price').innerText,
           link: element.querySelector('a').href
         })
         )
     })
 
-    console.log("data", data)
     await browser.close();
     return data;
 
   } catch (error) {
-    throw new Error("[Worten scrapping] ->", error)
+    console.log("[Worten scrapping] ->", error)
   }
 }
-/* 
+
 module.exports = {
   scrapingWorten
-} */
-
-scrapingWorten("macbook pro")
+}
