@@ -22,7 +22,7 @@ const ProductSearchSchema = mongoose.Schema({
       type: mongoose.Schema.Types.Decimal128,
       required: [true, "Product price in euros required"]
     },
-    appPoints: {
+    credits: {
       type: mongoose.Schema.Types.Number,
       required: [true, "Product behavior points value required"]
     }
