@@ -31,3 +31,4 @@ const ProductSearchSchema = mongoose.Schema({
   timestamps: true
 })
 
+module.exports = mongoose.model('ProductSearch', ProductSearchSchema);

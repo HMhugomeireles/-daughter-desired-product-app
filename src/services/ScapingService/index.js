@@ -1,5 +1,6 @@
 //const ProductModel = require('../../database/schemas')
 const getWebScapingFind = require('../../modules/scraping')
+const CreditService = require('../CreditService')
 
 
 async function searchProduct(product) {
@@ -25,7 +26,7 @@ module.exports = {
 function calculatePrices(products, productSearch) {
   return products.map(product => {
     const priceConvert = parseFloat(product.priceToShow.slice(1, product.priceToShow.length));
-    const credits = Math.floor(priceConvert * 2.45 * 10)
+    const credits = CreditService.calculateCreditsBaseOnProductPrice(priceConvert);
 
     return {
       name: product.name,
