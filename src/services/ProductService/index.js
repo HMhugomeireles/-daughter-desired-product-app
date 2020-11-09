@@ -1,4 +1,5 @@
 const ScrapingService = require('../ScapingService')
+const ProductModel = require('../../database/schemas/Product')
 
 async function searchProduct(product) {
   try {
@@ -10,6 +11,16 @@ async function searchProduct(product) {
 }
 
 
+async function getAllProductSearch() {
+  try {
+    return await ProductModel.find({});
+
+  } catch (error) {
+    throw new Error("[ProductService::getAllProductSearch]::", error)
+  }
+}
+
 module.exports = {
-  searchProduct
+  searchProduct,
+  getAllProductSearch
 }

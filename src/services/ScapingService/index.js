@@ -1,18 +1,27 @@
 //const ProductModel = require('../../database/schemas')
 const getWebScapingFind = require('../../modules/scraping')
 const CreditService = require('../CreditService')
-
+const ProductModel = require('../../database/schemas/Product')
 
 async function searchProduct(product) {
   try {
+    const allSearchProduct = await ProductModel.find({ keySearch: product });
+
+    if (allSearchProduct.length !== 0) {
+      return allSearchProduct
+    }
+
     const result = await getWebScapingFind(product)
 
     if (!result) {
       throw new Error('Result not found')
     }
-    console.log("###", result)
 
-    return calculatePrices(result, product)
+    const productCalculated = calculatePrices(result, product);
+    
+    await ProductModel.insertMany(productCalculated);
+
+    return productCalculated;
     
   } catch (error) {
     throw new Error("[ScrapingService::searching]::", error.message)

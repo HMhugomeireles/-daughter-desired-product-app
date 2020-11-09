@@ -3,12 +3,33 @@ const { ProductService } = require('../services')
 
 const routerProduct = Router()
 
-routerProduct.get('/search/:product',
+routerProduct.get('/', 
   async (req, res) => {
     try {
-      const { product } = req.params;
+      // TODO need create pagination
+      const products = await ProductService.getAllProductSearch();
 
-      const result = await ProductService.searchProduct(product)
+      res.json({
+        success: true,
+        totalProducts: products.length,
+        products
+      })
+    } catch (error) {
+      res.json({
+        success: false,
+        message: error.message,
+        stack: error
+      })
+    }
+  }
+)
+
+routerProduct.post('/search/',
+  async (req, res) => {
+    try {
+      const { productName } = req.body;
+
+      const result = await ProductService.searchProduct(productName)
       
       if (!result) {
         throw new Error('Same error append');
@@ -24,11 +45,7 @@ routerProduct.get('/search/:product',
         message: error.message,
         stack: error
       })  
-    }
-
-
-
-    
+    }    
   }
 )
 

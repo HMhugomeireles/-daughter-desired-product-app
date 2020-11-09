@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express')
-const logger = require('morgan')
+const morgan = require('morgan')
 const helmet = require('helmet')
 const cors = require('cors')
 const passport = require('passport')
@@ -13,7 +13,7 @@ require('./middlewares/auth/passport-setup');
 
 const app = express();
 
-app.use(logger('dev'));
+app.use(morgan('dev'));
 app.use(bodyParser.json())
 app.use(helmet())
 app.use(cors())

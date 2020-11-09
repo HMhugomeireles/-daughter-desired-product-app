@@ -1,33 +1,17 @@
 const mongoose = require('mongoose')
 
 const AccountSchema = mongoose.Schema({
-    provider: {
-        id: {
-            type: mongoose.Schema.Types.String,
-            required: [true, "User provider id value required"]
-        },
-        provider: {
-            type: mongoose.Schema.Types.String,
-            required: [true, "User  provider value required"]
-        },
+    userId:  {
+        tye: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
     },
-    name: {
-        type: mongoose.Schema.Types.String,
-        required: [true, "User name is value required"]
+    quantity: {
+        type: mongoose.Schema.Types.Decimal128,
+        default: 0.00
     },
-    email: {
-        type: mongoose.Schema.Types.String,
-        required: [true, "User email value required"]
-    },
-    picture: {
-        type: mongoose.Schema.Types.String,
-        required: [true, "User picture value required"]
-    },
-    role: {
-        type: mongoose.Schema.Types.String,
-        required: false,
-        enum: ['admin', 'user'],
-        default: 'user'
+    gems: {
+        type: mongoose.Schema.Types.Number,
+        default: 0
     }
 }, {
     timestamps: true
