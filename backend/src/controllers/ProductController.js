@@ -24,7 +24,7 @@ routerProduct.get('/',
   }
 )
 
-routerProduct.post('/search/',
+routerProduct.post('/search',
   async (req, res) => {
     try {
       const { productName } = req.body;
