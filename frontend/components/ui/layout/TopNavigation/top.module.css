@@ -1,0 +1,53 @@
+.header {
+    padding: 2.5rem 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 -15px 25px #333;
+    position: relative;
+
+    z-index: 99;
+}
+
+
+.logo {
+    font-size: 3.6rem;
+    font-family: monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-top: 1px dashed #865513;
+    border-bottom: 1px dashed #865513;
+}
+
+.logo1 {
+    color: #d47a04;
+}
+
+.logo2 {
+    color: #865513;
+}
+
+.userContainer {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    margin: 0 .7rem;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    background-color: #b4b4b4;
+}
+
+.username {
+    font-weight: bold;
+    margin: 0 3rem 0 0;
+    font-size: large;
+}
+
+.setting {
+    margin: 0 1.2rem;
+}
