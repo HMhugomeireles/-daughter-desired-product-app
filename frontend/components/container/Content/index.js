@@ -1,8 +1,6 @@
+import ContentUI from '../../ui/layout/Content'
 
+export default function Content( { children }) {
 
-export default function Content() {
-
-    return (
-        <main>content</main>
-    )
+    return <ContentUI>{ children }</ContentUI>
 }

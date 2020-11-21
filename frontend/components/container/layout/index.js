@@ -3,15 +3,13 @@ import SideNavigation from '../SideNavigation'
 import Content from '../Content'
 
 
-export default function Layout({ children }) {
+export default function Layout(props) {
 
     return (
         <>
             <TopNavigation />
             <SideNavigation />
-            <Content>
-                {children}
-            </Content>
+            <Content>{ props.children }</Content>
         </>
     )
 }

@@ -1,8 +1,6 @@
-
+import SideNavigationUI from '../../ui/layout/SideNavigation'
 
 export default function SideNavigation() {
 
-    return (
-        <div>Side</div>
-    )
+    return <SideNavigationUI />
 }
