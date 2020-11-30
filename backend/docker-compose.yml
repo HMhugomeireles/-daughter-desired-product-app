@@ -1,30 +1,31 @@
 version: '3'
 
 services:
-  mongodb:
+  mongo-db:
     image: mongo
-    container_name: mongodb
+    container_name: mongo-db
     restart: unless-stopped
     ports:
       - 32032:27017
+    volumes:
+      - ../_data/mongo-db:/data
+  redis-scraping-session:
+    image: redis:3.0
+    container_name: redis-scraping-session
+    restart: unless-stopped
+    command: redis-server --requirepass sOmE_sEcUrE_pAsS
+    ports:
+      - 32033:6379
+    volumes:
+      - ../_data/scraping-session:/data
   mongo-client:
     image: mongoclient/mongoclient:latest
     container_name: mongo-client
     hostname: mongoclient
     depends_on:
-      - mongodb
+      - mongo-db
     ports:
       - 3333:3000
-  web:
-    build: .
-    command: npm start
-    volumes:
-      - .:/usr/app/
-      - /usr/app/node_modules
-    ports:
-      - "4545:4400"
-    depends_on:
-      - mongodb
-    environment:
-      PORT: 4400
-      MONGODB_URL: mongodb://localhost:32032/
+volumes:
+  mongodb-data:
+  scraping-session-data:

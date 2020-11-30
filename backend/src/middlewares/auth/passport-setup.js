@@ -30,7 +30,7 @@ passport.use(new GoogleStrategy({
     const userSearch = await UserModel.findOne({ email: userTemp.email })
 
     if (userSearch) {
-      done(null, userSearch);
+      done(null, {token, userSearch});
       return;
     }
 
