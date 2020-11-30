@@ -1,0 +1,163 @@
+.headerInfo {
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.boxWrapper {
+    font-size: 1.6rem;
+    text-align: right;
+    position: relative;
+}
+
+
+.boxWrapper > span {
+    font-weight: 300;
+}
+
+.boxIcon {
+    font-size: 8rem;
+    position: absolute;
+    left: 20%;
+    top: -100%;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 4rem 4fr;
+}
+
+.main > h3 {
+    grid-column: 1 / span 3;
+    grid-row: 1 / 2;
+}
+
+/* */
+
+.wishListSection {
+    grid-column: 1 / 2;
+    grid-row: 2 / span 3;
+    
+    margin: 1rem;
+    padding: 2rem;
+
+    border-radius: .8rem;
+}
+
+.accountSection {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 3;
+}
+
+.boxHeader {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.wishListItem {
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+}
+
+
+.wishListItem > img {
+    width: 5rem;
+    border-radius: 1rem;
+    width: 6rem;
+}
+
+.wishListItemInfo {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 6rem);
+    color: var(--color-brown-dark);
+}
+
+.wishListItemInfo > span {
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.wishListItemInfo > div {
+    display: flex;
+    justify-content: center;
+}
+
+.wishListItemInfo > div > span {
+    padding: .5rem 1rem;
+    margin: .5rem;
+    border-radius: 1rem;;
+}
+
+.money {
+    background: var(--color-primary);
+}
+
+.diamond {
+    background: var(--color-secondary);
+}
+
+/* */
+
+.accountSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.accountSectionWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.accountSection > h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.accountSectionMoney,
+.accountSectionDiamond {
+    margin: 2rem;
+    padding: 1rem 3rem 3rem 3rem;
+    width: 45%;
+    border-radius: 1rem;
+}
+
+.accountSectionMoney {
+    background: var(--color-blue-super-light);
+}
+
+
+.accountSectionDiamond {
+    background: var(--color-green-super-light);
+}
+
+.accountSectionMoney > h4,
+.accountSectionDiamond > h4 {
+    text-align: center;
+    margin: 1rem;
+}
+
+.accountSectionMoneyList > li {
+    border-bottom: 1px dashed var(--color-blue-light);
+    font-weight: 300;
+    padding: 1rem 0;    
+}
+
+
+.accountSectionMoneyList > li:hover,
+.accountSectionDiamondList > li:hover {
+    opacity: .5;
+}
+
+.accountSectionDiamondList > li {
+    border-bottom: 1px dashed var(--color-green-light);
+    font-weight: 300;
+    padding: 1rem 0;
+}
