@@ -1,19 +1,23 @@
 .header {
-    padding: 2.5rem 3rem;
+    height: 5rem;
+    padding: 2rem 4rem;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
+    position: fixed;
+    width: 100vw;
+
+    background-color: #ffffffdc;
     box-shadow: 0 -15px 25px #333;
-    position: relative;
 
     z-index: 99;
 }
 
 
 .logo {
-    font-size: 3.6rem;
+    font-size: 2.3rem;
     font-family: monospace;
     font-weight: bold;
     text-transform: uppercase;
@@ -37,15 +41,15 @@
 .avatar {
     margin: 0 .7rem;
     border-radius: 50%;
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     background-color: #b4b4b4;
 }
 
 .username {
     font-weight: bold;
     margin: 0 3rem 0 0;
-    font-size: large;
+    font-size: 1.1rem;
 }
 
 .setting {

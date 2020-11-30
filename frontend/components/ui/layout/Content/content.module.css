@@ -1,4 +1,6 @@
 .container {
     position: relative;
-    left: 23rem;
+    padding: 8rem 4rem;
+    left: 20rem;
+    width: calc(100vw - 20rem);
 }

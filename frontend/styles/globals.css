@@ -1,5 +1,27 @@
 :root {
-  --color-background-page: #333;
+  --color-brown-light: #ffe9cc;
+  --color-brown-dark: #794400;
+
+  --color-blue-super-light: #f1f7ff;
+  --color-blue-light: #cce2fd;
+
+  --color-green-super-light: #f1fff2;
+  --color-green-super: #c1f3c4;
+
+  --color-grey-light: #fdfcfc;
+  --color-grey: ;
+  
+  --color-white: #fff;
+  --color-dark: #333;
+
+  
+  --color-primary: var(--color-blue-light);
+  --color-secondary: var(--color-green-super);
+
+  --color-background-page: var(--color-dark);
+
+  --font-brand: ;
+  --font-default: "Sans Serif";
 }
 
 
@@ -7,8 +29,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--font-default);
+  
+  overflow-x: hidden;
 }
 
 a {
@@ -19,3 +42,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+
