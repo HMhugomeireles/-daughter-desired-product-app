@@ -1,0 +1,119 @@
+.sectionInput {
+    margin: 3rem;
+    position: relative;
+}
+
+.sectionInput > input {
+    font-size: 3rem;
+    padding: 2rem 4rem;
+    border: .3rem dashed var(--color-brown-light);
+    color: var(--color-brown-dark);
+    width: 100%;
+}
+
+.sectionInput > span {
+    position: absolute;
+    right: 5rem;
+    top: 2.5rem;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.sectionInput > span:hover {
+    opacity: .6;
+}
+
+
+/**/
+
+
+.sectionSearchList > h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+.sectionSearchListWrapper {
+    background: var(--color-grey-light);
+    padding: 1rem;
+}
+
+.sectionSearchListWrapper  > h3 {
+    text-align: center;
+}
+
+.sectionSearchListMessage {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+    width: 100%;
+    margin: 5rem;
+}
+
+.sectionSearchListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+
+.sectionSearchListItem {
+    margin: .5rem;
+    padding: 2rem;
+
+    position: relative;
+    overflow: hidden;
+    background: var(--color-white);
+
+    box-shadow: 0px 5px 22px 5px #c7c7c733;
+    border-radius: .5rem;
+}
+
+.itemSave {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    opacity: .5;
+    transition: 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.itemPined,
+.itemSave:hover {
+    opacity: 1;
+    transform: rotate(-45deg);
+}
+
+.sectionSearchListItemTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.sectionSearchListItem > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.sectionSearchListItemPrice {
+    position: absolute;
+    top: 12rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemPriceMoney,
+.itemPriceDaimon {
+    padding: 1rem;
+    margin: .2rem;
+}
+
+.itemPriceMoney {
+    background: var(--color-primary);
+}
+
+.itemPriceDaimon {
+    background: var(--color-secondary);
+}

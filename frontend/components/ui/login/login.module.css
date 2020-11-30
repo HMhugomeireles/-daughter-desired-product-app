@@ -1,37 +1,84 @@
 .container {
-    width: 40vw;
-    height: 50vh;
+ width: 100vw;
+ height: 100vh;
+ position: relative;
+ background: #E5E5E5;
+}
 
-    border-radius: 1rem;
-    box-shadow: 0 3px 23px #000;
-
-    position: fixed;
+.wrapper {
+    width: 90%;
+    height: 70%;
+    
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    padding: 5rem;
+    display: flex;
+
+    border-radius: .5rem;
+    background: #fff;
+    box-shadow: 0px 0px 0px #3f3f440d, 0px 1px 3px #3f3f4426;
+}
+
+.loginImgSection {
+    background-image: url("https://images.unsplash.com/photo-1556745757-8d76bdb6984b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1866&q=80");
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100%;
+}
+
+
+.loginSignInSection {
+    padding: 3rem;
+    width: 50%;
+}
+
+
+.logo {
+    text-align: center;
+    font-size: 3.6rem;
+    font-family: monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-top: 1px dashed #865513;
+    border-bottom: 1px dashed #865513;
+}
+
+.logo1 {
+    color: #d47a04;
+}
+
+.logo2 {
+    color: #865513;
+}
+
+.loginSignInSection > h3 {
+    margin: 1.5rem;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
 }
 
 .groupInput {
     display: flex;
     flex-direction: column;
+    padding: 3rem;
 }
 
 
 .groupInput > label {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: .8rem 0;
 }
 
 .groupInput > input {
-    padding: 2rem;
-    font-size: medium;
-    border: none;
-    background: #333;
-    color: #cecece;
-    border-radius: 1rem;
-    margin: 1rem 0;
+    padding: 1.1rem;
+    font-size: 1rem;
+    border-radius: .2rem;
+    border: 1px solid #00000052;
 }
 
 .groupBtn {
@@ -39,22 +86,24 @@
 }
 
 .groupBtn > button {
-    margin: 3rem auto;
+    margin: 3rem 0;
     padding: 1.5rem 3.5rem;
+
     text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
     
-    background: cornflowerblue;
-    color: cornsilk;
-    border: none;
-    border-radius: 1rem;
-    font-size: large;
+    width: 100%;
     cursor: pointer;
 
-    box-shadow: 0 2px 25px #02328b;
+    border: none;
+    border-radius: .3rem;
+
+    background: #66400e;
+    color: #fafafa;
 }
 
 .groupBtn > button:hover {
-    background: #2e77ff;
-    color: cornsilk;
+    background: #d47a04;
 }
     

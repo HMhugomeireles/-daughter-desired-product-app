@@ -1,0 +1,27 @@
+.container {
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: .6rem;
+    color: var(--color-dark);
+}
+
+.primary {
+    background: var(--color-primary);
+}
+
+
+.secondary {
+    background: var(--color-secondary);
+}
+
+.w45 {
+    width: 45%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w100 {
+    width: 100%;
+}
