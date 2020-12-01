@@ -1,5 +1,4 @@
-//import SearchForm from '../shared/SearchForm'
-//import SearchForm from '../shared/SearchList'
+import ListItemsUi from '../shared/ListItems'
 import searchUiStyles from './searchui.module.css'
 
 export default function SearchUI(props) {
@@ -20,22 +19,9 @@ export default function SearchUI(props) {
                             : (
                                 <>
                                     <h3>Search Results</h3>
-                                    <div className={searchUiStyles.sectionSearchListContainer}>
-                                        {props.searchResults.map(item => (
-                                            <div className={searchUiStyles.sectionSearchListItem}>
-                                                <div
-                                                    className={`${searchUiStyles.itemSave} ${(item.itemSaved && searchUiStyles.itemPined)}`} 
-                                                    onClick={() => props.action.onSave(item.id)}
-                                                >📌</div>
-                                                <img src={item.img} />
-                                                <div className={searchUiStyles.sectionSearchListItemPrice}>
-                                                    <span className={searchUiStyles.itemPriceMoney}>{item.moneyValue}</span>
-                                                    <span className={searchUiStyles.itemPriceDaimon}>{item.daimonValue}</span>
-                                                </div>
-                                                <div className={searchUiStyles.sectionSearchListItemTitle}>{item.title}</div>
-                                            </div>
-                                        ))}
-                                    </div>
+                                    <ListItemsUi 
+                                        list={props.searchResults}
+                                        action={{onSave: props.actions.onSave}}/>
                                 </>
                             )
                         }
@@ -43,8 +29,6 @@ export default function SearchUI(props) {
                 </section>
 
             </section>
-            {/* <SearchForm inputValue={props.inputValue} />
-            <SearchList list={props.searchList} /> */}
         </>
     )
 }
