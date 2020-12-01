@@ -6,17 +6,21 @@
   --color-blue-light: #cce2fd;
 
   --color-green-super-light: #f1fff2;
-  --color-green-super: #c1f3c4;
+  --color-green-light: #c1f3c4;
 
   --color-grey-light: #fdfcfc;
   --color-grey: ;
+
+  --color-red-super-light: #fce7e7;
+  --color-red-light: #ffb4b4;
+  --color-red: #b41616;
   
   --color-white: #fff;
   --color-dark: #333;
 
   
   --color-primary: var(--color-blue-light);
-  --color-secondary: var(--color-green-super);
+  --color-secondary: var(--color-green-light);
 
   --color-background-page: var(--color-dark);
 
