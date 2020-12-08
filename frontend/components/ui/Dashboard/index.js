@@ -10,7 +10,7 @@ export default function DashBoardUI() {
 
                 <BoxInfo type="primary" size="w50">
                     <div className={dashboardStyles.boxWrapper}>
-                        <span className={dashboardStyles.boxIcon}>💰</span>
+                        <span className={dashboardStyles.boxIcon}>💵</span>
                         <h3>1000.00€</h3>
                         <span>Money Wallet</span>
                     </div>

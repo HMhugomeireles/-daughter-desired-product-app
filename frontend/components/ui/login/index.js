@@ -1,5 +1,7 @@
 import loginStyles from './login.module.css'
 
+import Link from 'next/link'
+
 export default function LoginUI({ onLoginProvider }) {
 
     return (
@@ -24,7 +26,9 @@ export default function LoginUI({ onLoginProvider }) {
                     </div>
 
                     <div className={loginStyles.groupBtn}>
-                        <button onClick={() => onLoginProvider('google')}>Sign in with Google</button>
+                        <Link href="/dashboard">
+                            <button onClick={() => onLoginProvider('google')}>Sign in with Google</button>
+                        </Link>
                     </div>
 
                 </section>
