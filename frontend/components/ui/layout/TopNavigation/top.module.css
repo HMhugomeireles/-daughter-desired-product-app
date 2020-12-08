@@ -43,7 +43,6 @@
     border-radius: 50%;
     width: 45px;
     height: 45px;
-    background-color: #b4b4b4;
 }
 
 .username {
@@ -52,6 +51,80 @@
     font-size: 1.1rem;
 }
 
-.setting {
-    margin: 0 1.2rem;
+.notification,
+.cart {
+    font-size: 2rem;
+    margin: 0 1rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.notification:hover,
+.cart:hover {
+    animation: iconAnimation 300ms forwards;
+}
+
+
+.notificationSection,
+.shoppingCartSection {
+    z-index: 99;
+    position: absolute;
+    top: 6.5rem;
+    right: 2rem;
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 25px -10px #333;
+
+    animation: sectionIconAnimation 300ms forwards;
+
+    min-width: 25rem;
+    min-height: 35rem;
+
+}
+
+.notificationNaN {
+    text-align: center;
+    position: relative;
+    top: 12.5rem;
+    padding: 2rem;
+    background: var(--color-grey-light);
+    border: 2px dashed var(--color-grey);
+    border-radius: 1rem;
+}
+
+.shoppingCartSectionFooter {
+    position: absolute;
+    min-width: 20rem;
+    bottom: .5rem;
+
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+
+    border-top: 1px dashed var(--color-grey);
+}
+
+@keyframes iconAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes sectionIconAnimation {
+    0% {
+        transform: scale(0.5);
+    }
+    25% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
