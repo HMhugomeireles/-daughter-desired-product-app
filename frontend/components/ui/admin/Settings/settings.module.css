@@ -1,0 +1,49 @@
+.container {
+    padding: 2rem 3rem;
+    width: 30rem;
+
+    background: var(--color-grey-light);
+}
+
+.groupInput {
+    padding: 1rem 0;
+    margin: .8rem 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.groupInput > label {
+    margin-bottom: .4rem;
+}
+
+.groupInputEdit {
+    display: flex;
+    align-items: center;
+}
+
+.editButton {
+    cursor: pointer;
+    user-select: none;
+    font-size: 3rem;
+    position: absolute;
+    right: 0;
+    width: 12%;
+}
+
+.input {
+    padding: 1rem;
+    font-size: 1rem;
+    width: 85%;
+}
+
+.editButtonOptions {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: .8rem 0;
+}
+
+.editButtonOptions > button:first-of-type {
+    margin-right: .5rem;
+}

@@ -1,0 +1,33 @@
+.container {
+    padding: 1rem 2rem;
+
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+}
+
+.primary {
+    background: var(--color-primary);
+    color: var(--color-dark);
+}
+
+.secondary {
+    background: var(--color-secondary);
+    color: var(--color-dark);
+}
+
+.save {
+    background: var(--color-green);
+    color: var(--color-white);
+}
+
+.cancel {
+    background: var(--color-yellow);
+    color: var(--color-white);
+}
+
+.delete {
+    background: var(--color-red);
+    color: var(--color-white);
+}
