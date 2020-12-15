@@ -2,12 +2,16 @@ import Layout from '../../components/container/layout';
 import Settings from '../../components/container/admin/Settings';
 import CreateBill from '../../components/container/admin/CreateBill';
 
+import adminStyles from '../../styles/pages/admin.module.css'
+
 export default function admin() {
   
     return (
         <Layout>
-            <Settings />
-            <CreateBill />
+            <div className={adminStyles.container}>
+                <Settings />
+                <CreateBill />
+            </div>
 
             <div>admin</div>
             

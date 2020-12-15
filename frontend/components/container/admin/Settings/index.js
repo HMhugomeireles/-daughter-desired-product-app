@@ -19,18 +19,6 @@ export default function Settings(props) {
     const [isPercentageToBuyReadOnly, setPercentageToBuyReadOnly] = useState(true)
     const [isSendInviteReadOnly, setSendInviteReadOnly] = useState(true)
 
-    function onSetValueEarn(e) {
-        setValueEarn(e.target.value)
-    }
-
-    function onSetEmail(e) {
-        setEmail(e.target.value)
-    }
-
-    function onSetAllowPercentageBuy(e) {
-        setAllowPercentageBuy(e.target.value)
-    }
-
     function onHandlerToggleEdit(sectionEdit) {
         switch (sectionEdit) {
             case "valueEarn":
@@ -39,7 +27,7 @@ export default function Settings(props) {
                 break;
             case "typeEarning":
                 setShowTypeEarning(!showTypeEarning)
-                setTypeEarningReadOnly("")
+                setTypeEarningReadOnly(undefined)
                 break;
             case "notificationEmail":
                 setShowNotificationEmail(!showNotificationEmail)
@@ -79,9 +67,6 @@ export default function Settings(props) {
 
     return  <SettingsUI 
                 controllers={{
-                    valueEarn,
-                    email,
-                    allowPercentageBuy,
                     showValueEarn,
                     showTypeEarning,
                     showNotificationEmail,
@@ -93,10 +78,17 @@ export default function Settings(props) {
                     isPercentageToBuyReadOnly,
                     isSendInviteReadOnly                    
                 }}
+                data={{
+                    valueEarn,
+                    email,
+                    allowPercentageBuy,
+                    sendInvite
+                }}
                 actions={{
-                    onSetValueEarn,
-                    onSetEmail,
-                    onSetAllowPercentageBuy,
+                    onSetValueEarn: (e) => setValueEarn(e.target.value),
+                    onSetEmail: (e) => setEmail(e.target.value),
+                    onSetAllowPercentageBuy: (e) => setAllowPercentageBuy(e.target.value),
+                    onSetSendInvite: (e) => setSendInvite(e.target.value),
                     onHandlerToggleEdit,
                     onCancel,
                     onSave

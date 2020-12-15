@@ -5,16 +5,18 @@
     background: var(--color-grey-light);
 }
 
+.input {
+    padding: 1rem;
+    font-size: 1rem;
+    width: 85%;
+}
+
 .groupInput {
     padding: 1rem 0;
     margin: .8rem 0;
     display: flex;
     flex-direction: column;
     position: relative;
-}
-
-.groupInput > label {
-    margin-bottom: .4rem;
 }
 
 .groupInputEdit {
@@ -29,12 +31,6 @@
     position: absolute;
     right: 0;
     width: 12%;
-}
-
-.input {
-    padding: 1rem;
-    font-size: 1rem;
-    width: 85%;
 }
 
 .editButtonOptions {
