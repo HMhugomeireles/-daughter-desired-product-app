@@ -1,22 +1,16 @@
-import { useState } from 'react'
 import CreateBillUI from '../../../ui/admin/CreateBill'
 
 export default function CreateBillContainer(props) {
-    const [billDescription, setBillDescription] = useState('')
-    const [amountMoney, setAmountMoney] = useState('')
+
+
+    function onSubmitBill(data) {
+        console.log("form", data)
+    }
 
 
     return <CreateBillUI
-                controllers={{
-
-                }}
-                data={{
-                    billDescription,
-                    amountMoney
-                }}
                 actions={{
-                    onSetBillDescription: (e) => setBillDescription(e.target.value),
-                    onSetAmountMoney: (e) => setAmountMoney(e.target.value)
+                    onSubmitBill
                 }}
             />
 }

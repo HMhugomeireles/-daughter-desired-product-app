@@ -36,9 +36,10 @@ export default function header(props) {
                         <div className={topStyles.notificationNaN}>Shopping cart empty</div>
                     )}
                     {Boolean(props.data.shoppingCart.length !== 0) && (
-                        <div>
+                        <>
+                            {console.log(props.data.shoppingCart)}
                             {props.data.shoppingCart.map(item => (
-                                <div>
+                                <div key={`cart-${item.id}`}>
                                     <div>{item.title}</div>
                                     <div>{item.moneyValue}💵</div>
                                     <div>{item.daimonValue}💎</div>
@@ -46,10 +47,10 @@ export default function header(props) {
                             ))}
                             <div className={topStyles.shoppingCartSectionFooter}>
                                 <span>Total</span>
-                                <span>{props.data.resumeShoppingCart.totalMoney}</span>
-                                <span>{props.data.resumeShoppingCart.totalDiamond}</span>
+                                <span>💵{props.data.resumeShoppingCart.totalMoney}</span>
+                                <span>💎{props.data.resumeShoppingCart.totalDiamond}</span>
                             </div>               
-                        </div>
+                        </>
                     )}
                 </div>
             )}

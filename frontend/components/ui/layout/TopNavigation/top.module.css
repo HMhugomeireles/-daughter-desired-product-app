@@ -68,7 +68,7 @@
 .notificationSection,
 .shoppingCartSection {
     z-index: 99;
-    position: absolute;
+    position: fixed;
     top: 6.5rem;
     right: 2rem;
     background: var(--color-white);

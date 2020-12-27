@@ -65,3 +65,16 @@
 .itemPriceDaimon {
     background: var(--color-secondary);
 }
+
+.buyButton {
+    width: 100%;
+    padding: 1rem;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.cursorNot {
+    cursor: not-allowed;
+}

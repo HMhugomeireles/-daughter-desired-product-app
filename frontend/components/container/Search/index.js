@@ -1,27 +1,55 @@
 import { useState } from 'react';
+import { searchProduct } from '../../../services/Products'
 import SearchUI from '../../ui/Search'
 
-import { mockSearchProduct } from '../../../mock/products'
-
 export default function Search() {
-    const [searchInput, setSearchInput] = useState({input: ""});
+    const [searchInput, setSearchInput] = useState("");
+    const [products, setProducts] = useState([]);
+    const [errors, setErrors] = useState(undefined);
+    const [loading, setLoading] = useState(false);
 
-    function onChange(e) {
-        setSearchInput({ input: e.target.value})
-    }
 
     function onSave(id) {
         console.log("onSave", id)
     }
 
-    return <SearchUI 
-                form={searchInput}
-                searchForm={{
-                    onChange
+    function handleProductSearch() {
+        setLoading(true)
+        searchProduct(searchInput)
+            .then(results => {
+                console.log("Results", results)
+                if(results.success) {
+                    setProducts(results.products)        
+                }
+                setLoading(false)
+            })
+            .catch(err => setErrors(err.message))
+    }
+
+    function handleKeyPress(e) {
+        if (e.code === 'Enter') {
+            handleProductSearch()
+        }
+    }
+
+    return (
+        <>
+            {Boolean(errors) && <h2>{errors}</h2>}
+            <SearchUI
+                controllers={{
+                    loading
+                }}
+                data={{
+                    searchResults: products,
+                    searchInput
                 }}
                 actions={{
-                    onSave
+                    onSave,
+                    onSetInputValue: (e) => setSearchInput(e.target.value), 
+                    onSearch: (e) => handleProductSearch,
+                    onKeyPress: handleKeyPress
                 }}
-                searchResults={mockSearchProduct}/>
-
+            />
+        </>
+    )
 }

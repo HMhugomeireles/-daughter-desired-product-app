@@ -25,3 +25,8 @@
     right: 0;
     width: 12%;
 }
+
+.selectBox {
+    padding: 2rem;
+    width: 100%;
+}

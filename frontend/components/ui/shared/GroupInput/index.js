@@ -1,6 +1,7 @@
+import { forwardRef } from 'react'
 import groupInputStyles from './groupInput.module.css'
 
-export default function GroupInput(props) {
+function GroupInput(props, ref) {
     return (
         <div className={groupInputStyles.groupInput}>
             <label>{props.data.label}</label>
@@ -9,13 +10,14 @@ export default function GroupInput(props) {
                     <div className={groupInputStyles.editButton} onClick={props.actions.onEdit}>📝</div>
                 )}
                 <input
+                    ref={ref}
                     readOnly={props.controllers.isValueReadOnly} 
-                    className={groupInputStyles.input} 
-                    type="text" 
-                    name="value" 
-                    value={props.data.inputValue} 
-                    onChange={props.actions.onSetInputValue} />
+                    className={groupInputStyles.input}
+                    name={props.data.name} 
+                    />
             </div>
         </div>
     )
 }
+
+export default forwardRef(GroupInput)

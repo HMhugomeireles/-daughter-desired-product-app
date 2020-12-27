@@ -1,34 +1,38 @@
 export const mockSearchProduct = [
     {
-        id: "1234",
+        id: "12",
         img: "https://lh3.googleusercontent.com/02FSKuXcJfzS1mxhLIFfYOJPPJda5Qe2aF6RTP0hurMEKsrnR99MbVg0a4rCi32EkfJY9EWRDtMEFXcymGC87vsC",
         title: "Minecraft 2",
         moneyValue: 30.00,
-        daimonValue: 400,
-        itemSaved: true
+        diamondValue: 400,
+        itemSaved: true,
+        canBuy: false,
     },
     {
-        id: "1236",
+        id: "13",
         img: "https://lh3.googleusercontent.com/02FSKuXcJfzS1mxhLIFfYOJPPJda5Qe2aF6RTP0hurMEKsrnR99MbVg0a4rCi32EkfJY9EWRDtMEFXcymGC87vsC",
         title: "Minecraft 2",
         moneyValue: 30.00,
-        daimonValue: 400,
-        itemSaved: false
+        diamondValue: 400,
+        itemSaved: false,
+        canBuy: true,
     },
     {
-        id: "1234",
+        id: "14",
         img: "https://lh3.googleusercontent.com/02FSKuXcJfzS1mxhLIFfYOJPPJda5Qe2aF6RTP0hurMEKsrnR99MbVg0a4rCi32EkfJY9EWRDtMEFXcymGC87vsC",
         title: "Minecraft 2",
         moneyValue: 30.00,
-        daimonValue: 400,
-        itemSaved: true
+        diamondValue: 400,
+        itemSaved: true,
+        canBuy: true,
     },
     {
-        id: "1236",
+        id: "15",
         img: "https://lh3.googleusercontent.com/02FSKuXcJfzS1mxhLIFfYOJPPJda5Qe2aF6RTP0hurMEKsrnR99MbVg0a4rCi32EkfJY9EWRDtMEFXcymGC87vsC",
         title: "Minecraft 2",
         moneyValue: 30.00,
-        daimonValue: 400,
-        itemSaved: false
+        diamondValue: 400,
+        itemSaved: false,
+        canBuy: false,
     },
 ]
